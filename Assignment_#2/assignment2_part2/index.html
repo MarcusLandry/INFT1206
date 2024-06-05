@@ -17,23 +17,32 @@ HTML document for assignment 2 part 2
     <h1>Table template</h1>
 
     <table>
+      <colgroup>
+        <col span="2">
+        <col style="border: 2px black">
+        <col span="9">
+      </colgroup>
       <caption>
         Data about the planets of our solar system 
         (Planetary facts taken from <a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/">
           Nasa's Planetary Fact Sheet - Metric</a>).
       </caption>
       <thead>
-        <th>Planet</th>
-        <th>Mass (10^24 kg)</th>
-        <th>Diameter (km)</th>
-        <th>Distance from the Sun (million km)</th>
-        <th>Orbital Period (days)</th>
-        <th>Mean Temperature (°C)</th>
-        <th>Number of moons</th>
-        <th>Notes</th>
+        <td colspan="2"></td>
+        <th scope="col">Name</th>
+        <th scope="col">Mass (10 <sup>24</sup> kg)</th>
+        <th scope="col">Diameter (km)</th>
+        <th scope="col">Density (kg/m<sup>3</sup>)</th>
+        <th scope="col">Gravity (m/s<sup>2</sup>)</th>
+        <th scope="col">Length of day (hours)</th>
+        <th scope="col">Distance from Sun (10<sup>6</sup>km)</th>
+        <th scope="col">Mean Temperature (°C)</th>
+        <th scope="col">Number of moons</th>
+        <th scope="col">Notes</th>
       </thead>
       <tbody>
         <tr>
+          <th rowspan="4" colspan="2" scope="rowgroup">Terrestrial planets</th>
           <th scope="row">Mercury</th>
           <td>0.330</td>
           <td>4,879</td>
@@ -74,6 +83,8 @@ HTML document for assignment 2 part 2
           <td>The red planet</td>
         </tr>
         <tr>
+          <th rowspan="4" scope="rowgroup">Jovian planets</th>
+          <th rowspan="2" scope="rowgroup">Gas giants</th>
           <th scope="row">Jupiter</th>
           <td>1898</td>
           <td>142,984</td>
@@ -94,6 +105,7 @@ HTML document for assignment 2 part 2
           <td></td>
         </tr>
         <tr>
+          <th rowspan="2" scope="rowgroup">Ice giants</th>
           <th scope="row">Uranus</th>
           <td>86.8</td>
           <td>51,118</td>
@@ -114,6 +126,7 @@ HTML document for assignment 2 part 2
           <td></td>
         </tr>
         <tr>
+          <th colspan="2" scope="rowgroup">Dwarf planets</th>
           <th scope="row">Pluto</th>
           <td>0.0146</td>
           <td>2,370</td>
