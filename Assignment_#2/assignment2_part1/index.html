@@ -122,23 +122,22 @@ HTML document for assignment 2 part 1
       </article>
 
       <div class="further-info">
-        <!-- insert images with srcsets and sizes -->
         <a href="https://www.mozilla.org/en-US/firefox/new/">
-          <img srcset="firefoxlogo120.png 120w,firefoxlogo400.png 400w" 
+          <img srcset="firefoxlogo120.jpg 120w,firefoxlogo400.jpg 400w" 
             sizes="(max-width: 500px) 120px,400px" 
-            src="firefoxlogo400.png" 
+            src="firefoxlogo400.jng" 
             alt="Download Firefox">
         </a>
         <a href="https://www.mozilla.org/">
-          <img srcset="mozilladinosaur120.png 120w,mozilladinosaur400.png 400w" 
+          <img srcset="mozilladinosaur120.jpg 120w,mozilladinosaur400.jpg 400w" 
             sizes="(max-width: 500px) 120px, 400px" 
-            src="mozilladinosaur400.png" 
+            src="mozilladinosaur400.jpg" 
             alt="Learn more about Mozilla">
         </a>
         <a href="https://addons.mozilla.org/">
           <img srcset="firefoxaddons120.jpg 120w,firefoxaddons400.jpg 400w" 
             sizes="(max-width: 500px) 120px, 400px" 
-            src="firefox-addons400.jpg" 
+            src="firefoxaddons400.jpg" 
             alt="Customize Firefox with add-ons">
         </a>
         <a href="https://developer.mozilla.org/en-US/">
@@ -148,7 +147,10 @@ HTML document for assignment 2 part 1
       </div>
 
       <div class="red-panda">
-        <!-- insert picture element -->
+        <picture>
+          <source media="(max-width: 600px)" srcset="redpanda600.jpg">
+          <img src="redpanda1200.jpg" alt="red panda">
+        </picture>
       </div>
 
     </main>
